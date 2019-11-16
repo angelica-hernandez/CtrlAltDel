@@ -20,8 +20,10 @@
 //     /*==================================================================
 //     [ Validate ]*/
 //     var input = $('.validate-input .input100');
+//     var user;
 
-//     $('.validate-form').on('submit',function(){
+//     $('.validate-form').on('submit',function(e){
+//         e.preventDefault();
 //         var check = true;
 
 //         for(var i=0; i<input.length; i++) {
@@ -70,6 +72,7 @@
 //     [ Show pass ]*/
 //     var showPass = 0;
 //     $('.btn-show-pass').on('click', function(){
+//         user= $('.validate-input .input100').val();
 //         if(showPass == 0) {
 //             $(this).next('input').attr('type','text');
 //             $(this).addClass('active');
@@ -86,6 +89,21 @@
 
 // })(jQuery);
 
+
 $(document).ready(function(){
-    $(document).on("click",""
-});
+    var input= $('.validate-input .input100');
+    $(document).on("click","#sub",function(e){
+        e.preventDefault();
+        console.log($("#username").val());
+        console.log($("#password").val());
+    });
+    
+    $(document).on("click","#create",function(e){
+        e.preventDefault();
+        console.log($("#username").val());
+        console.log($("#name").val());
+        console.log($("#email").val());
+        console.log($("#password").val());
+    });
+})
+
